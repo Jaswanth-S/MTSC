@@ -61,6 +61,7 @@ R004 J4,J5,J6
 ├── junit-4.13.2.jar                    # jar file used for junit testing
 ├── hamcrest-core-1.3.jar               # jar file was used as a dependency for JUnit
 ├── MovieTheatreSeatingChallenge.iml    # is a module file created by IntelliJ IDEA
+├── testresults.PNG                     # image showing the testcases 
 └── README.md                           # This file is for the description of the project.
 
 ``` 
@@ -112,6 +113,6 @@ ieTheaterSeatingChallenge\src\Tests
 ```
 
 Here I am using IntelliJ IDE, so I added the jar files as libraries to the project. 
-Tested the setup by running tests in IDE.
+Tested the setup by running tests in IDE. Below is the results of tests
 
 ![plot](./testsresult.PNG)
