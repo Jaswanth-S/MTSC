@@ -111,5 +111,7 @@ To execute test cases, run the command:
 ieTheaterSeatingChallenge\src\Tests
 ```
 
-Here I am using IntelliJ IDE, so I added the jar files are libraries to the project. 
-Test the setup by running tests in IDE.
+Here I am using IntelliJ IDE, so I added the jar files as libraries to the project. 
+Tested the setup by running tests in IDE.
+
+![plot](./testsresult.PNG)
