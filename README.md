@@ -51,7 +51,8 @@ R004 J4,J5,J6
 2. The program prioritizes consecutive(in same row) seats, and when there does not exist any consecutive seats, the party will be recursively split in halves while minimizing their distance from the center of the theater.
 
 **Folder Structure:**<br/>
-.
+``` 
+
 ├── src                                 # contains all class files and test files 
     ├── Main.java                       # Main class, the starting point of the program
     ├── MovieTheater.java               # MovieTheatre class, the main logic is performed
@@ -62,6 +63,7 @@ R004 J4,J5,J6
 ├── MovieTheatreSeatingChallenge.iml    # is a module file created by IntelliJ IDEA
 └── README.md                           # This file is for the description of the project.
 
+``` 
 
 **How to Run The Program:** <br/>
 First, open your terminal and navigate to the `src` folder of the project, and run the following command to compile the program: 
