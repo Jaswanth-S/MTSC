@@ -15,7 +15,7 @@ public class MovieTheater {
 
     //constructor for the MovieTheater class
     public MovieTheater() {
-        rows =10;
+        rows = 10;
         columns = 20;
         availableSeats = rows * columns;
         center = new int[]{rows / 2, columns / 2};
@@ -112,7 +112,7 @@ public class MovieTheater {
                 upper = false; lower = false;
             }
         }
-
+        //recursive split
         if (assignedSeats.size() == 0) {    // if no seats are found by expanding from the center row.
             assignedSeats.addAll(searchSeats(num / 2));   // split the party into half and search again
             for(Integer[] a: assignedSeats) {
@@ -187,7 +187,6 @@ public class MovieTheater {
                 }
             }
         }
-
     }
 
 }

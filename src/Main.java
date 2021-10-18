@@ -11,6 +11,8 @@ public class Main {
             Path file = Paths.get(path);
             //List to store the requests in the input file
             List<String> requests = new ArrayList<>();
+            //fileCheck is to check file exists or not
+            boolean fileCheck =false;
             //Reading the requests from the input file
             try (InputStream in = Files.newInputStream(file); BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
                 String line;
@@ -20,6 +22,7 @@ public class Main {
             }
             catch (IOException e) {
                 System.err.println(e);
+                fileCheck = true;
             }
             //Instantiating the MovieTheater class and calling the processRequests() method with the requests
             MovieTheater movieTheater = new MovieTheater();
@@ -28,17 +31,18 @@ public class Main {
             for (String output : outputs) {
                 concatString += output + "\n";
             }
-
-            byte[] data = concatString.getBytes();
-            path = path.replaceAll("\\.[a-z]+", "-output.txt");
-            System.out.println("The output for the program is found at : ");
-            System.out.println(path);
-            Path p = Paths.get(path);
-            //Writing the reservations to the output file
-            try (OutputStream out = new BufferedOutputStream(Files.newOutputStream(p, CREATE, APPEND))) {
-                out.write(data, 0, data.length);
-            } catch (IOException exception) {
-                System.err.println(exception);
+            if(!fileCheck) {
+                byte[] data = concatString.getBytes();
+                path = path.replaceAll("\\.[a-z]+", "-output.txt");
+                System.out.println("The output for the program is found at : ");
+                System.out.println(path);
+                Path p = Paths.get(path);
+                //Writing the reservations to the output file
+                try (OutputStream out = new BufferedOutputStream(Files.newOutputStream(p, CREATE, APPEND))) {
+                    out.write(data, 0, data.length);
+                } catch (IOException exception) {
+                    System.err.println(exception);
+                }
             }
         }
         catch (IndexOutOfBoundsException e){

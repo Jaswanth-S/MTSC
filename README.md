@@ -53,7 +53,7 @@ R004 J4,J5,J6
 **Folder Structure:**<br/>
 ``` 
 
-├── src                                 # contains all class files and test files 
+├── src                              # contains all class files and test files 
     ├── Main.java                       # Main class, the starting point of the program
     ├── MovieTheater.java               # MovieTheatre class, the main logic is performed
     ├── Tests.java                      # Tests class, testing is performed in this class
